@@ -1,27 +1,8 @@
 <section>
 
   <div class="container">
-
-    <div class="card category-card">
-      <span> Sport </span>
-
-      <!--      Element zbiorczy na przyciski-->
-      <div>
-        <button class="btn btn-sm margin-left-sm">
-          <fa-icon [icon]="trashIcon"></fa-icon>
-        </button>
-
-        <button class="btn btn-sm margin-left-sm">
-          <fa-icon [icon]="commentsIcon"></fa-icon>
-        </button>
-
-        <button class="btn btn-sm margin-left-sm">
-          <fa-icon [icon]="playIcon"></fa-icon>
-        </button>
-      </div>
-
-    </div>
-
+  <!--  Dodawanie zmiennej "categoryName", do której mogą być przekazywane dane  -->
+  <app-category-card [categoryName]=" 'Nowa kategoria' " ></app-category-card>
     <input class="input margin" type="text" placeholder="Nazwa kategorii">
     <button class="btn margin">
       <fa-icon [icon]="plusIcon"> </fa-icon>

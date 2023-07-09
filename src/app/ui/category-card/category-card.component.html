@@ -1,0 +1,21 @@
+<!-- Guziki dla klasy "category-card -->
+<div class="card category-card">
+      <!-- Dodajemy zmienną, która będzie przekazywać nazwy kategorii -->
+      <span> {{categoryName}} </span>
+
+      <!--      Element zbiorczy na przyciski-->
+      <div>
+        <button class="btn btn-sm margin-left-sm">
+          <fa-icon [icon]="trashIcon"></fa-icon>
+        </button>
+
+        <button class="btn btn-sm margin-left-sm">
+          <fa-icon [icon]="commentsIcon"></fa-icon>
+        </button>
+
+        <button class="btn btn-sm margin-left-sm">
+          <fa-icon [icon]="playIcon"></fa-icon>
+        </button>
+      </div>
+
+    </div>
