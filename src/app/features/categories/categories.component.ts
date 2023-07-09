@@ -20,4 +20,9 @@ export class CategoriesComponent {
   //  czyszczenie wartości
     this.categoryName = ""
   }
+
+  removeCategory(category: Category) {
+    let indexOf = this.categories.indexOf(category);
+    this.categories.splice(indexOf, 1);
+  }
 }
