@@ -1,7 +1,7 @@
 <!-- Guziki dla klasy "category-card -->
 <div class="card category-card">
       <!-- Dodajemy zmienną, która będzie przekazywać nazwy kategorii -->
-      <span> {{categoryName}} </span>
+      <span> {{category.name}} </span>
 
       <!--      Element zbiorczy na przyciski-->
       <div>
@@ -9,7 +9,7 @@
           <fa-icon [icon]="trashIcon"></fa-icon>
         </button>
 
-        <button class="btn btn-sm margin-left-sm">
+        <button [routerLink]="[category.category_id, 'flash-cards']" class="btn btn-sm margin-left-sm">
           <fa-icon [icon]="commentsIcon"></fa-icon>
         </button>
 

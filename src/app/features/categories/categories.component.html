@@ -3,7 +3,7 @@
   <div class="container">
   <!--  Dodawanie zmiennej "categoryName", do której mogą być przekazywane dane  -->
   <app-category-card (removeClicked)="removeCategory(category)"
-                     *ngFor="let category of categories" [categoryName]="category.name" ></app-category-card>
+                     *ngFor="let category of categories" [category]="category" ></app-category-card>
 
     <input (keydown.enter)="addCategory()"
            [(ngModel)]="categoryName"
