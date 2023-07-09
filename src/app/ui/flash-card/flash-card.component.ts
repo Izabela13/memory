@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
-import {faTrash} from "@fortawesome/free-solid-svg-icons";
+import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {faPlus, faTrash} from "@fortawesome/free-solid-svg-icons";
+import {FlashCard} from "../../models/flash-card";
+import {ActivatedRoute} from "@angular/router";
+import {FlashCardService} from "../../services/flash-card.service";
 
 @Component({
   selector: 'app-flash-card',
@@ -7,6 +10,15 @@ import {faTrash} from "@fortawesome/free-solid-svg-icons";
   styleUrls: ['./flash-card.component.css']
 })
 export class FlashCardComponent {
+
+  @Input() word!: string;
+  @Input() translation!: string;
+  @Output() removeClicked = new EventEmitter<void>();
+
   trashIcon = faTrash;
+
+  emitRemove() {
+    this.removeClicked.emit();
+  }
 
 }
